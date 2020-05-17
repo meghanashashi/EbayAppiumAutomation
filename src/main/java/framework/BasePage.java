@@ -8,8 +8,11 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import javax.script.ScriptEngineManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -80,7 +83,19 @@ public class BasePage {
 				.moveTo(PointOption.point(x, endy)).release().perform();
 
 	}
+	
+	public ScreenOrientation getCurrentOrientation() {
+		return driver.getOrientation();
+	}
 
+	public void setScreenRotationToPortrait() {
+		driver.rotate(ScreenOrientation.PORTRAIT);
+	}
+	
+	public void setScreenRotationToLandscape() {
+		driver.rotate(ScreenOrientation.LANDSCAPE);
+	}	
+	
 	public static Properties readInputData(String inputFilePath) {
 		File file = new File(inputFilePath);
 		System.out.println(file.getAbsolutePath());

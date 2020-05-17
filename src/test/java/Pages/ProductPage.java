@@ -42,7 +42,7 @@ public class ProductPage extends BasePage {
 		itemValues.add(brandName);
 		itemValues.add(description);
 		itemValues.add(price);
-
+		
 		scrollTo();
 		
 		return itemValues;
