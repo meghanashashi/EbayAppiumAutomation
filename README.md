@@ -21,7 +21,7 @@ mvn clean install
 
  ![image](https://github.com/meghanashashi/EbayAppiumAutomation/blob/master/images/Report.png)
 
-7. Log files 
+7. Log files will be generated in the file location specified in [log4j.properties](https://github.com/meghanashashi/EbayAppiumAutomation/blob/master/src/test/resources/log4j.properties)
 
 # App Design
 
@@ -40,14 +40,14 @@ mvn clean install
 
 # Scenarios covered
 
-  - # Login Validation
+  - ## Login Validation
       This testcase skips the sign in and logs in to the application, verifies whether user is able to navigate to home page.
       
-  - # Item Details Validation
+  - ## Item Details Validation
       1. An item is searched and details (brand name, price, description) are read from Search results page.
       2. After navigating to product details page, again brand name, price and description are read.
       3. Both the set of values are compared and verified if they are equal.
       4. Scrolling action is incorporated in this testcase for demonstration.
       
-  - # Screen Rotation Validation
+  - ## Screen Rotation Validation
       This testcase checks the present screen orientation, rotates it and verifies if screen orientation is changed.
