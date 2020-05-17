@@ -2,7 +2,7 @@
 
 This project has been developed to automate Ebay application testing on Android platform using Java, Appium, TestNG and Maven.
 
-# Steps to run the application:
+## Steps to run the application:
 
 1. Install Appium Server (CLI). Follow instructions on [Appium Installation Help](http://appium.io/docs/en/about-appium/getting-started/). Appium Server need not be started externally, it is handled in the code itself.
 
@@ -23,7 +23,7 @@ mvn clean install
 
 7. Log files will be generated in the file location specified in [log4j.properties](https://github.com/meghanashashi/EbayAppiumAutomation/blob/master/src/test/resources/log4j.properties)
 
-# App Design
+## App Design
 
 1. Testcases can be [found here](https://github.com/meghanashashi/EbayAppiumAutomation/tree/master/src/test/java/TestCases)
 
@@ -38,16 +38,16 @@ mvn clean install
 6. Extent Reports is used for reporting functionality.
 
 
-# Scenarios covered
+## Scenarios covered
 
-  - ## Login Validation
+  - ### Login Validation
       This testcase skips the sign in and logs in to the application, verifies whether user is able to navigate to home page.
       
-  - ## Item Details Validation
+  - ### Item Details Validation
       1. An item is searched and details (brand name, price, description) are read from Search results page.
       2. After navigating to product details page, again brand name, price and description are read.
       3. Both the set of values are compared and verified if they are equal.
       4. Scrolling action is incorporated in this testcase for demonstration.
       
-  - ## Screen Rotation Validation
+  - ### Screen Rotation Validation
       This testcase checks the present screen orientation, rotates it and verifies if screen orientation is changed.
