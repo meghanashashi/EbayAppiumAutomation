@@ -40,19 +40,17 @@ public class SearchPage extends BasePage {
 
 	public void clickOnRandomItem(String locator, int index) {
 		logger.debug("Inside clickOnRandomItem function");
-		descList = driver.findElements(By.id(locator));
-		descList.get(index).click();
+		findElementAndClick(locator, index);
 	}
 
 	public List<String> get_brandName_Price_Description(int index) {
 		logger.debug("Inside get_brandName_Price_Description function");
-		descList = driver.findElements(By.id("com.amazon.mShop.android.shopping:id/item_title"));
-		priceList = driver.findElements(By.xpath(
-				"//*[@resource-id=\"com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2\"]//*[@class=\"android.widget.TextView\"]"));
-
-		String brandName = descList.get(index).getText().split("[0-9]")[0];
-		String description = descList.get(index).getText().split(brandName)[1];
-		String price = priceList.get(index).getText().replaceAll(" .*", "").substring(1);
+		
+		
+		String brandName = getText(By.id("com.amazon.mShop.android.shopping:id/item_title"),index).split("[0-9]")[0];
+		String description =getText(By.id("com.amazon.mShop.android.shopping:id/item_title"),index) .split(brandName)[1];
+		String price = getText(By.xpath(
+				"//*[@resource-id=\"com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2\"]//*[@class=\"android.widget.TextView\"]"),index).replaceAll(" .*", "").substring(1);
 		
 		logger.debug("brandName---"+brandName);
 		logger.debug("description---"+description);

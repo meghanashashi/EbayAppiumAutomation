@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="89620" started-at="2020-05-17T07:57:24Z" finished-at="2020-05-17T07:58:54Z">
+  <suite name="Suite" duration-ms="60353" started-at="2020-05-21T14:59:26Z" finished-at="2020-05-21T15:00:26Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="89620" started-at="2020-05-17T07:57:24Z" finished-at="2020-05-17T07:58:54Z">
+    <test name="Test1" duration-ms="60353" started-at="2020-05-21T14:59:26Z" finished-at="2020-05-21T15:00:26Z">
       <class name="TestCases.TestSuite1">
-        <test-method status="PASS" signature="startServer()[pri:0, instance:TestCases.TestSuite1@1442d7b5]" name="startServer" is-config="true" duration-ms="249" started-at="2020-05-17T13:27:24Z" finished-at="2020-05-17T13:27:24Z">
+        <test-method status="PASS" signature="startServer()[pri:0, instance:TestCases.TestSuite1@32cf48b7]" name="startServer" is-config="true" duration-ms="197" started-at="2020-05-21T20:29:26Z" finished-at="2020-05-21T20:29:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startServer -->
-        <test-method status="PASS" signature="init(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.TestSuite1@1442d7b5]" name="init" is-config="true" duration-ms="56940" started-at="2020-05-17T13:27:24Z" finished-at="2020-05-17T13:28:21Z">
+        <test-method status="PASS" signature="init(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.TestSuite1@32cf48b7]" name="init" is-config="true" duration-ms="23603" started-at="2020-05-21T20:29:26Z" finished-at="2020-05-21T20:29:50Z">
           <params>
             <param index="0">
               <value>
@@ -42,19 +42,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="validateLoginPage()[pri:1, instance:TestCases.TestSuite1@1442d7b5]" name="validateLoginPage" duration-ms="6468" started-at="2020-05-17T13:28:21Z" finished-at="2020-05-17T13:28:28Z">
+        <test-method status="PASS" signature="validateLoginPage()[pri:1, instance:TestCases.TestSuite1@32cf48b7]" name="validateLoginPage" duration-ms="7931" started-at="2020-05-21T20:29:50Z" finished-at="2020-05-21T20:29:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginPage -->
-        <test-method status="PASS" signature="validateSearchResultInSearchPage()[pri:2, instance:TestCases.TestSuite1@1442d7b5]" name="validateSearchResultInSearchPage" duration-ms="25743" started-at="2020-05-17T13:28:28Z" finished-at="2020-05-17T13:28:54Z">
+        <test-method status="PASS" signature="validateSearchResultInSearchPage()[pri:2, instance:TestCases.TestSuite1@32cf48b7]" name="validateSearchResultInSearchPage" duration-ms="28390" started-at="2020-05-21T20:29:58Z" finished-at="2020-05-21T20:30:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateSearchResultInSearchPage -->
-        <test-method status="PASS" signature="testScreenRotation()[pri:3, instance:TestCases.TestSuite1@1442d7b5]" name="testScreenRotation" duration-ms="386" started-at="2020-05-17T13:28:54Z" finished-at="2020-05-17T13:28:54Z">
+        <test-method status="PASS" signature="testScreenRotation()[pri:3, instance:TestCases.TestSuite1@32cf48b7]" name="testScreenRotation" duration-ms="358" started-at="2020-05-21T20:30:26Z" finished-at="2020-05-21T20:30:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testScreenRotation -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:TestCases.TestSuite1@1442d7b5]" name="exit" is-config="true" duration-ms="599" started-at="2020-05-17T13:28:56Z" finished-at="2020-05-17T13:28:57Z">
+        <test-method status="PASS" signature="exit()[pri:0, instance:TestCases.TestSuite1@32cf48b7]" name="exit" is-config="true" duration-ms="472" started-at="2020-05-21T20:30:27Z" finished-at="2020-05-21T20:30:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exit -->

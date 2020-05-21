@@ -6,9 +6,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
-
-import javax.script.ScriptEngineManager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -32,6 +32,7 @@ public class BasePage {
 
 	protected AndroidDriver<AndroidElement> driver;
 	protected WebDriverWait wait;
+	protected List<AndroidElement> list = new ArrayList<>();
 
 	public BasePage(AndroidDriver<AndroidElement> aDriver) {
 		this.driver = aDriver;
@@ -66,8 +67,16 @@ public class BasePage {
 
 	}
 
-	protected String getText(By locator) {
-		return driver.findElement(locator).getText();
+	protected String getText(By locator, int index) {
+		return driver.findElements(locator).get(index).getText();
+	}
+	
+	
+	protected void findElementAndClick(String locator, int index){
+		
+		list = driver.findElements(By.id(locator));
+		list.get(index).click();
+		
 	}
 
 	public void scrollTo() {
@@ -98,7 +107,7 @@ public class BasePage {
 	
 	public static Properties readInputData(String inputFilePath) {
 		File file = new File(inputFilePath);
-		System.out.println(file.getAbsolutePath());
+		
 
 		FileInputStream inputStream = null;
 

@@ -49,6 +49,8 @@ public class AppiumService {
 		service.start();
 		appiumServerURL = service.getUrl();
 
+		
+		
 		//	}
 		//		else {
 		//			System.out.println("Appium Server already running on Port - " + port);

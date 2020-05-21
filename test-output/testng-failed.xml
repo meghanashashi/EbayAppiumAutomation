@@ -18,8 +18,8 @@
     <classes>
       <class name="TestCases.TestSuite1">
         <methods>
+          <include name="testScreenRotation"/>
           <include name="init"/>
-          <include name="validateLoginPage"/>
           <include name="validateSearchResultInSearchPage"/>
           <include name="exit"/>
           <include name="startServer"/>

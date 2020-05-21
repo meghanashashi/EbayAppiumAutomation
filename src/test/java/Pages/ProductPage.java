@@ -29,9 +29,11 @@ public class ProductPage extends BasePage {
 		
 		TimeUnit.SECONDS.sleep(5);
 		
-		String brandName = getText(By.xpath("//*[@resource-id=\"title_feature_div\"]//*[@class=\"android.view.View\"]")).split("[0-9]")[0];
-		String description =getText(By.xpath("//*[@resource-id=\"title_feature_div\"]//*[@class=\"android.view.View\"]")) .split(brandName)[1];
-		String price = getText(By.xpath("//*[@resource-id=\"atfRedesign_priceblock_priceToPay\"]//*[@class=\"android.widget.EditText\"]")).split(" ")[1];
+		String brandName = getText(By.xpath("//*[@resource-id=\"title_feature_div\"]//*[@class=\"android.view.View\"]"),0).split("[0-9]")[0];
+		String description =getText(By.xpath("//*[@resource-id=\"title_feature_div\"]//*[@class=\"android.view.View\"]"),0) .split(brandName)[1];
+		String price = getText(By.xpath("//*[@resource-id=\"atfRedesign_priceblock_priceToPay\"]//*[@class=\"android.widget.EditText\"]"),0).split(" ")[1];
+		
+		System.out.println("brandName----"+brandName+"description-----"+description+"price-----"+price);
 		
 		logger.debug("brandName---"+brandName);
 		logger.debug("description---"+description);
