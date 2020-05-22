@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
 import framework.BasePage;
 import io.appium.java_client.android.AndroidDriver;
@@ -49,6 +50,13 @@ public class ProductPage extends BasePage {
 		
 		return itemValues;
 
+	}
+
+	public void addToCart() {
+		scrolltoElement("Add to Cart");
+		clickUsingTextContains("Add to Cart");
+		Assert.assertTrue(getText(By.xpath("//*[@text=\"Added to cart\"]"), 0).equals("Added to cart"));
+		
 	}
 
 }

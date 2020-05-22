@@ -68,8 +68,16 @@ public class TestSuite1 extends Driver {
 		logger.info("Testcase successful");
 
 	}
-
+	
+	
 	@Test(priority=3)
+	public void addToCart() {
+		ProductPage productPage = new ProductPage(aDriver);
+		productPage.addToCart();
+		
+	}
+
+	@Test(priority=4)
 	public void testScreenRotation() {
 
 		

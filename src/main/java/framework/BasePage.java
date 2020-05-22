@@ -93,6 +93,10 @@ public class BasePage {
 
 	}
 	
+	
+	public void scrolltoElement(String txt) {
+		driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(new UiSelector().text(\""+txt+"\"))"));
+	}
 	public ScreenOrientation getCurrentOrientation() {
 		return driver.getOrientation();
 	}

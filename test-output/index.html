@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.TestSuite1" hash-for-method="addToCart">addToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.TestSuite1" hash-for-method="testScreenRotation">testScreenRotation</a> <!-- method navigator-link -->
@@ -133,6 +138,13 @@
               <span class="class-name">TestCases.TestSuite1</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addToCart">
+                  </a> <!-- addToCart -->
+                  <span class="method-name">addToCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="testScreenRotation">
@@ -216,24 +228,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'validateSearchResultInSearchPage')
 data.setCell(0, 2, 'TestCases.TestSuite1')
-data.setCell(0, 3, 28390);
+data.setCell(0, 3, 25657);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateLoginPage')
+data.setCell(1, 1, 'addToCart')
 data.setCell(1, 2, 'TestCases.TestSuite1')
-data.setCell(1, 3, 7931);
+data.setCell(1, 3, 14172);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testScreenRotation')
+data.setCell(2, 1, 'validateLoginPage')
 data.setCell(2, 2, 'TestCases.TestSuite1')
-data.setCell(2, 3, 358);
+data.setCell(2, 3, 5958);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testScreenRotation')
+data.setCell(3, 2, 'TestCases.TestSuite1')
+data.setCell(3, 3, 363);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 46 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -266,23 +282,27 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">init(MYPHONE, 28c09d84903f7ece, 10.0.0, com.amazon.mShop.android.shopping, com.amazon.mShop.splashscreen....)</span>
-                <span class="method-start">204 ms</span>
+                <span class="method-start">193 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">validateLoginPage</span>
-                <span class="method-start">23823 ms</span>
+                <span class="method-start">25419 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateSearchResultInSearchPage</span>
-                <span class="method-start">31790 ms</span>
+                <span class="method-start">31404 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addToCart</span>
+                <span class="method-start">57067 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testScreenRotation</span>
-                <span class="method-start">60187 ms</span>
+                <span class="method-start">71242 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">exit</span>
-                <span class="method-start">61360 ms</span>
+                <span class="method-start">72242 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
