@@ -14,7 +14,14 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
 public class ProductPage extends BasePage {
-	
+
+	By brandNameLocator = By.xpath("//*[@resource-id=\\\"title_feature_div\\\"]//*[@class=\\\"android.view.View\\\"]");
+	By descriptionLocator = By.xpath("//*[@resource-id=\"title_feature_div\"]//*[@class=\"android.view.View\"]");
+	By priceLocator = By
+			.xpath("//*[@resource-id=\"atfRedesign_priceblock_priceToPay\"]//*[@class=\"android.widget.EditText\"]");
+
+	By addToCartLocator = By.xpath("//*[@text=\"Added to cart\"]");
+
 	Logger logger = LoggerFactory.getLogger(ProductPage.class);
 
 	static List<AndroidElement> descList = new ArrayList<>();
@@ -25,38 +32,37 @@ public class ProductPage extends BasePage {
 	}
 
 	public List<String> get_Name_Price_Description() throws InterruptedException {
-		
+
 		logger.debug("Inside get_Name_Price_Description function ");
-		
+
 		TimeUnit.SECONDS.sleep(5);
-		
-		String brandName = getText(By.xpath("//*[@resource-id=\"title_feature_div\"]//*[@class=\"android.view.View\"]"),0).split("[0-9]")[0];
-		String description =getText(By.xpath("//*[@resource-id=\"title_feature_div\"]//*[@class=\"android.view.View\"]"),0) .split(brandName)[1];
-		String price = getText(By.xpath("//*[@resource-id=\"atfRedesign_priceblock_priceToPay\"]//*[@class=\"android.widget.EditText\"]"),0).split(" ")[1];
-		
-		System.out.println("brandName----"+brandName+"description-----"+description+"price-----"+price);
-		
-		logger.debug("brandName---"+brandName);
-		logger.debug("description---"+description);
-		logger.debug("price---"+price);
-		
-		
+
+		String brandName = getText(brandNameLocator, 0).split("[0-9]")[0];
+		String description = getText(descriptionLocator, 0).split(brandName)[1];
+		String price = getText(priceLocator, 0).split(" ")[1];
+
+		System.out.println("brandName----" + brandName + "description-----" + description + "price-----" + price);
+
+		logger.debug("brandName---" + brandName);
+		logger.debug("description---" + description);
+		logger.debug("price---" + price);
+
 		List<String> itemValues = new ArrayList<String>();
 		itemValues.add(brandName);
 		itemValues.add(description);
 		itemValues.add(price);
-		
+
 		scrollTo();
-		
+
 		return itemValues;
 
 	}
 
-	public void addToCart() {
+	public boolean addToCart() {
 		scrolltoElement("Add to Cart");
 		clickUsingTextContains("Add to Cart");
-		Assert.assertTrue(getText(By.xpath("//*[@text=\"Added to cart\"]"), 0).equals("Added to cart"));
-		
+		return (getText(addToCartLocator, 0).equals("Added to cart"));
+
 	}
 
 }

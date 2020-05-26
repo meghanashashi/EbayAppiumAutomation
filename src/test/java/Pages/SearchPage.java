@@ -13,6 +13,11 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
 public class SearchPage extends BasePage {
+	
+	
+	By brandNameLocator = By.id("com.amazon.mShop.android.shopping:id/item_title");
+	By priceLocator = By.xpath(
+			"//*[@resource-id=\"com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2\"]//*[@class=\"android.widget.TextView\"]");
 
 	Logger logger = LoggerFactory.getLogger(SearchPage.class);
 
@@ -31,14 +36,14 @@ public class SearchPage extends BasePage {
 
 	}
 
-	public void selectAnItemFromSearchList() throws InterruptedException {
-		logger.debug("Inside selectAnItemFromSearchList function ");
+	public void selectItemFromSearchList(int index) throws InterruptedException {
+		logger.debug("Inside selectItemFromSearchList function ");
 		TimeUnit.SECONDS.sleep(7);
-		clickOnRandomItem("com.amazon.mShop.android.shopping:id/item_title", 1);
+		clickOnRandomItem(brandNameLocator, index);
 
 	}
 
-	public void clickOnRandomItem(String locator, int index) {
+	public void clickOnRandomItem(By locator, int index) {
 		logger.debug("Inside clickOnRandomItem function");
 		findElementAndClick(locator, index);
 	}
@@ -47,10 +52,9 @@ public class SearchPage extends BasePage {
 		logger.debug("Inside get_brandName_Price_Description function");
 		
 		
-		String brandName = getText(By.id("com.amazon.mShop.android.shopping:id/item_title"),index).split("[0-9]")[0];
-		String description =getText(By.id("com.amazon.mShop.android.shopping:id/item_title"),index) .split(brandName)[1];
-		String price = getText(By.xpath(
-				"//*[@resource-id=\"com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2\"]//*[@class=\"android.widget.TextView\"]"),index).replaceAll(" .*", "").substring(1);
+		String brandName = getText(brandNameLocator,index).split("[0-9]")[0];
+		String description =getText(brandNameLocator,index) .split(brandName)[1];
+		String price = getText(priceLocator,index).replaceAll(" .*", "").substring(1);
 		
 		logger.debug("brandName---"+brandName);
 		logger.debug("description---"+description);

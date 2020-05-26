@@ -57,7 +57,7 @@ public class TestSuite1 extends Driver {
 
 		// Step 4: Select random item from the list and navigate to product detail
 		// screen
-		searchPage.selectAnItemFromSearchList();
+		searchPage.selectItemFromSearchList(Integer.valueOf(prop.getProperty("randomItemIndex")));
 
 		ProductPage productPage = new ProductPage(aDriver);
 
@@ -72,9 +72,11 @@ public class TestSuite1 extends Driver {
 	
 	@Test(priority=3)
 	public void addToCart() {
+		logger.info("Testcase started");
+		logger.info("Inside addToCart testcase");
 		ProductPage productPage = new ProductPage(aDriver);
-		productPage.addToCart();
-		
+		Assert.assertTrue(productPage.addToCart());
+		logger.info("Testcase successful");
 	}
 
 	@Test(priority=4)

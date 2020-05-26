@@ -72,9 +72,9 @@ public class BasePage {
 	}
 	
 	
-	protected void findElementAndClick(String locator, int index){
+	protected void findElementAndClick(By locator, int index){
 		
-		list = driver.findElements(By.id(locator));
+		list = driver.findElements(locator);
 		list.get(index).click();
 		
 	}
@@ -95,7 +95,7 @@ public class BasePage {
 	
 	
 	public void scrolltoElement(String txt) {
-		driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(new UiSelector().text(\""+txt+"\"))"));
+		driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(\""+txt+"\"))"));
 	}
 	public ScreenOrientation getCurrentOrientation() {
 		return driver.getOrientation();
